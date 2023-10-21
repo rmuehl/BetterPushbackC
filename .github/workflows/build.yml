@@ -30,7 +30,7 @@ jobs:
       - name: Build
         run: ./build_release
       - name: list files
-        run: find 
+        run: find BetterPushback
 #      - name: Upload Artifacts
 #        uses: actions/upload-artifact@v3
 #        with:
