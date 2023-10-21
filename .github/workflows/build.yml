@@ -23,7 +23,7 @@ jobs:
       - name: configure libacfutils
         run: 'cd src/libacfutils && chmod +x build_deps &&./build_deps'
       - name: Build libacfutils redist
-        run: 'cd src/libacfutils && chmod +x build_redist %% ./build_redist'
+        run: 'cd src/libacfutils && chmod +x build_redist && ./build_redist'
       - name: Build
         run: 'chmod +x build_release && ./build_release'
       - name: list files
