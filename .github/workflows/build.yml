@@ -1,0 +1,41 @@
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+# This workflow will build a package using Gradle and then publish it to GitHub packages when a release is created
+# For more information see: https://github.com/actions/setup-java/blob/main/docs/advanced-usage.md#Publishing-using-gradle
+
+name: Publish Release
+
+on:
+  push:
+    tags:
+      - "**"
+
+jobs:
+  build-lin-win:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Make script executable
+        run: chmod +x build_release
+      - name: Install curl-dev
+        run: sudo apt-get update&&sudo apt-get -y install libcurl4-openssl-dev
+      - name: Build
+        run: ./build_release
+
+#      - name: Upload Artifacts
+#        uses: actions/upload-artifact@v3
+#        with:
+#          name: fanboxd-linux-${{github.ref_name}}-x86_64-release
+#          path: build/bin/linuxX64/releaseExecutable/FanboxD.kexe
+#      - name: Publish release
+#        uses: softprops/action-gh-release@v1
+#        with:
+#          files: BetterPushback/*
+#          draft: true
+#          prerelease: true
