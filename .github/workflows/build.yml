@@ -26,8 +26,8 @@ jobs:
         run: 'cd src/libacfutils && chmod +x build_redist && ./build_redist'
       - name: Build
         run: 'chmod +x build_release && ./build_release'
-      - name: list files
-        run: find BetterPushback
+      - name: Archive files
+        run: zip BetterPushBack_lin_win.zip BetterPushback
 #      - name: Upload Artifacts
 #        uses: actions/upload-artifact@v3
 #        with:
