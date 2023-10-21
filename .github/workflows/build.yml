@@ -23,6 +23,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+        with:
+          submodules: 'recursive'
       - name: Make script executable
         run: chmod +x build_release
       - name: Install dependencies
