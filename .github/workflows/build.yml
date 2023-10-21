@@ -26,7 +26,7 @@ jobs:
       - name: Make script executable
         run: chmod +x build_release
       - name: Install dependencies
-        run: sudo apt-get update&&sudo apt-get -y install libcurl4-openssl-dev mingw-w64-x86-64-dev
+        run: sudo apt-get update&&sudo apt-get -y install libcurl4-openssl-dev mingw-w64-x86-64-dev g++-mingw-w64-x86-64 gcc-mingw-w64-x86-64 cmake
       - name: Build
         run: ./build_release
       - name: list files
