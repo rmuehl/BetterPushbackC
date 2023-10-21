@@ -22,8 +22,6 @@ jobs:
         run: sudo apt-get update&&sudo apt-get -y install build-essential gcc-multilib g++-multilib mingw-w64 libgl1-mesa-dev libglu1-mesa-dev libx11-dev qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools qt5-qmake
       - name: configure libacfutils
         run: 'cd src/libacfutils && chmod +x build_deps &&./build_deps'
-      - name: Make script executable
-        run: chmod +x build_release
       - name: Build
         run: 'chmod +x build_release && ./build_release'
       - name: list files
