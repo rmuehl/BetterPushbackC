@@ -27,15 +27,15 @@ jobs:
       - name: Build
         run: 'chmod +x build_release && ./build_release'
       - name: Archive files
-        run: zip BetterPushBack_lin_win.zip BetterPushback
-#      - name: Upload Artifacts
-#        uses: actions/upload-artifact@v3
-#        with:
-#          name: fanboxd-linux-${{github.ref_name}}-x86_64-release
-#          path: build/bin/linuxX64/releaseExecutable/FanboxD.kexe
-#      - name: Publish release
-#        uses: softprops/action-gh-release@v1
-#        with:
-#          files: BetterPushback/*
-#          draft: true
-#          prerelease: true
+        run: zip -r BetterPushBack_lin_win.zip BetterPushback
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: BetterPushBack_lin_win.zip
+          path: BetterPushBack_lin_win.zip
+      - name: Publish release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: BetterPushBack_lin_win.zip
+          draft: true
+          prerelease: true
