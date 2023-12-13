@@ -19,7 +19,7 @@ jobs:
         run: sudo apt-get update && sudo apt-get -y install build-essential gcc-multilib g++-multilib mingw-w64 libgl1-mesa-dev libglu1-mesa-dev libx11-dev qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools qt5-qmake libasound2-dev libportaudio2 libpulse-dev ffmpeg libxcursor-dev
       - name: Restore libacfutils dep cache
         id: restore_libacfutils_dep_cache
-        run: actions/cache/restore@v3
+        uses: actions/cache/restore@v3
         with:
           path: |
             src/libacfutils/zlib
@@ -57,7 +57,7 @@ jobs:
           path: BetterPushBack_lin_win.zip
       - name: Save libacfutils dep cache
         id: save_libacfutils_dep_cache
-        run: actions/cache/save@v3
+        uses: actions/cache/save@v3
         with:
           path: |
             src/libacfutils/zlib
