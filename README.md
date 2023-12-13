@@ -1,7 +1,11 @@
 # !!!! IMPORTANT !!!!
 DO NOT download BetterPushback using the green "Clone or Download" button
 on the main repository page. Use the
-[RELEASES](https://github.com/skiselkov/BetterPushbackC/releases) section, the click on "Assets" and download "BetterPushback.zip".
+[RELEASES](https://github.com/CHH2000day/BetterPushbackC/releases) section, the click on "Assets" and download "BetterPushback.zip".
+If you DO need to clone this project,use `git clone https://github.com/CHH2000day/BetterPushbackC --recursive`.
+
+# About this repository  
+This is another version of [BetterPushbackC by skiselkov](https://github.com/skiselkov/BetterPushbackC) with some changes.
 
 # About BetterPushback
 
@@ -16,7 +20,7 @@ around the world.
 
 ## Donations
 
-To leave a voluntary donation, please follow the PayPal link below:
+To leave a voluntary donation to skiselkov,the original author of BetterPushbackC, please follow the PayPal link below:
 
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8DN9LYD5VP4NY)
 
